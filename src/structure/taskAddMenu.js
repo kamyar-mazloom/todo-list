@@ -1,3 +1,6 @@
+import{cancelAddTask} from "/src/function/taskList.js"
+import{addTask} from "/src/function/taskList.js"
+
 function taskAddMenuCreation(){
     let taskPage = document.getElementById("taskPage")
 
@@ -28,7 +31,7 @@ function taskAddMenuCreation(){
     taskDateBar.append(taskDateTag)
 
     let taskDateInput = document.createElement("input")
-    taskDateInput.setAttribute("id","TaskDateInput")
+    taskDateInput.setAttribute("id","taskDateInput")
     taskDateInput.setAttribute("type","date")
     taskDateBar.append(taskDateInput)
 
@@ -61,13 +64,13 @@ function taskAddMenuCreation(){
     let taskAddBtn = document.createElement("div")
     taskAddBtn.setAttribute("id","addBtnTask")
     taskAddBtn.innerHTML= "Add"
-    // taskAddBtn.addEventListener("click",addTask)
+    taskAddBtn.addEventListener("click",addTask)
     taskBtnBar.append (taskAddBtn)
 
     let taskCancelBtn = document.createElement("div")
     taskCancelBtn.setAttribute("id","cancelBtnTask")
     taskCancelBtn.innerHTML = "Cancel"
-    // taskCancelBtn.addEventListener("click",cancelAddTask)
+    taskCancelBtn.addEventListener("click",cancelAddTask)
     taskBtnBar.append (taskCancelBtn)
 }
 export{taskAddMenuCreation}

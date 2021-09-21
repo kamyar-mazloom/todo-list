@@ -1,4 +1,4 @@
-import{taskAddMenuCreation} from "/src/structure/taskAddMenu.js"
+import{taskListAddSummon} from "/src/function/taskList.js"
 
 function taskPageCreation() {
     let parent = document.getElementById("parent")
@@ -19,7 +19,7 @@ function taskPageCreation() {
     let addBtn = document.createElement("div")
     addBtn.setAttribute("id","addBtn")
     addBtn.innerHTML = "⊕"
-    addBtn.addEventListener("click",taskAddMenuCreation)
+    addBtn.addEventListener("click",taskListAddSummon)
     taskPage.append(addBtn)
 }
 

@@ -1,3 +1,4 @@
+import { taskListCreation } from "./taskList.js";
 import{projectAddMenuCreation} from "/src/structure/projectAddMenu.js";
 
 //Project array
@@ -45,9 +46,9 @@ function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
-}
+  }
 
-//add button function for "add project"
+  //add button function for "add project"
 function addProject(){
     let project = {
         title: document.getElementById("projectInput").value,
@@ -64,4 +65,6 @@ export{addProject}
 //opening the projects
 function openProject(){
     document.getElementById("projectName").innerHTML=this.id
+    removeAllChildNodes(taskList);
+    taskListCreation();
 }
