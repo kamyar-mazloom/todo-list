@@ -30,10 +30,15 @@
     color: rgb(236, 231, 222);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 23px;
-    padding-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-right: 20px;
     text-align: right;
     cursor: pointer;
+}
+.project:hover{
+    background-color: rgba(240, 248, 255, 0.219);  
+    border-radius: 10px;
 }
 #projectAddBtn{
     color: rgb(236, 231, 222);
@@ -87,6 +92,7 @@
     padding-right: 10px;
     text-align: right;
     cursor: pointer; 
+    float: right;
 }
 #projectInput{
     margin-top: 15px;
@@ -123,7 +129,6 @@
 #taskAddMenu{
     background-color: rgba(95, 158, 160, 0.411);
     border-radius: 10px;
-    width: 270px;
     float: right;
     margin-right: 10px;
 }
@@ -158,6 +163,7 @@
 }
 #taskDateBar{
     display: flex;
+    margin-right: 10px;
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -194,4 +200,15 @@
     text-align: left;
     cursor: pointer;  
     padding-right: 5px;
+}
+.task{
+    color: rgb(236, 231, 222);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    padding: 10px 0px 10px 20px;
+    cursor: pointer; 
+}
+.task:hover{
+    background-color: rgba(240, 248, 255, 0.219);  
+    border-radius: 10px;
 }
