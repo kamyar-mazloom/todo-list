@@ -16,6 +16,7 @@ function projectListCreation() {
         let project = document.createElement('div')
         project.setAttribute("class","project")
         project.setAttribute("id",projectList[i].title)
+        project.addEventListener("click",openProject)
         project.innerHTML = projectList[i].title;
         projects.append(project)
     } }
@@ -45,19 +46,22 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
 //add button function for "add project"
 function addProject(){
     let project = {
         title: document.getElementById("projectInput").value,
     }
     if (project.title!=="") {
-
         projectList.push(project);
         removeAllChildNodes(projects);
         projectListCreation();
         document.getElementById("projectInput").value=""
-
-
     }
 }
 export{addProject}
+
+//opening the projects
+function openProject(){
+    document.getElementById("projectName").innerHTML=this.id
+}

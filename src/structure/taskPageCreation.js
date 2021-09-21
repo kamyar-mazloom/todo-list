@@ -1,3 +1,5 @@
+import{taskAddMenuCreation} from "/src/structure/taskAddMenu.js"
+
 function taskPageCreation() {
     let parent = document.getElementById("parent")
 
@@ -7,6 +9,7 @@ function taskPageCreation() {
 
     let projectName = document.createElement("div")
     projectName.setAttribute("id","projectName")
+    projectName.innerHTML = "Pick a project"
     taskPage.append(projectName)
 
     let taskList = document.createElement("div")
@@ -16,6 +19,7 @@ function taskPageCreation() {
     let addBtn = document.createElement("div")
     addBtn.setAttribute("id","addBtn")
     addBtn.innerHTML = "⊕"
+    addBtn.addEventListener("click",taskAddMenuCreation)
     taskPage.append(addBtn)
 }
 
