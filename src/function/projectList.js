@@ -90,3 +90,4 @@ function deleteProject(){
     document.getElementById("projectName").innerHTML="Pick a project";
     projectListCreation();
 }
+
