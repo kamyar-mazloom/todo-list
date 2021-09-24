@@ -14,12 +14,25 @@ function projectListCreation() {
     for (let i=0; i<projectList.length; i++){
         let projects = document.getElementById("projects")
 
+        let projectBar = document.createElement("div")
+        projectBar.setAttribute("class","projectBar")
+        projects.append(projectBar)
+
+        let ProjectClsBtn = document.createElement("div")
+        ProjectClsBtn.setAttribute("id",i)
+        ProjectClsBtn.setAttribute("class","ProjectClsBtn")
+        ProjectClsBtn.innerHTML = "🗑"
+        ProjectClsBtn.addEventListener("click",deleteProject)
+        projectBar.append(ProjectClsBtn)
+
+
         let project = document.createElement('div')
         project.setAttribute("class","project")
         project.setAttribute("id",projectList[i].title)
         project.addEventListener("click",openProject)
         project.innerHTML = projectList[i].title;
-        projects.append(project)
+        project.innerHTML += " |";
+        projectBar.append(project)
     } }
     export{projectListCreation}
 
@@ -67,4 +80,13 @@ function openProject(){
     document.getElementById("projectName").innerHTML=this.id
     removeAllChildNodes(taskList);
     taskListCreation();
+}
+
+//delete project 
+function deleteProject(){
+    projectList.splice(this.id,1);
+    removeAllChildNodes(projects);
+    removeAllChildNodes(taskList);
+    document.getElementById("projectName").innerHTML="Pick a project";
+    projectListCreation();
 }

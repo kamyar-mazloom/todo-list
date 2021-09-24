@@ -2,10 +2,10 @@ import{taskAddMenuCreation} from "/src/structure/taskAddMenu.js"
 
 // Task array 
 let taskListArray = [
-    {project:'work',task:'young nino',deadline:'',priority:'low'},
-    {project:'work',task:'young nino',deadline:'',priority:'low'},
-    {project:'work',task:'young nino',deadline:'',priority:'low'},
-    {project:'work',task:'young nino',deadline:'',priority:'low'},
+    {project:'work',task:'find a job',deadline:'2021-08-21',priority:'Low'},
+    {project:'work',task:'get fired',deadline:'',priority:'Normal'},
+    {project:'work',task:'get unemployment',deadline:'',priority:'High'},
+    {project:'work',task:'profit',deadline:'',priority:'Top'},
 ]
 
 //task array to object
@@ -14,11 +14,33 @@ function taskListCreation() {
         if(document.getElementById("projectName").innerHTML==taskListArray[i].project){
         let taskList = document.getElementById("taskList")
 
+        let taskBar = document.createElement('div')
+        taskBar.setAttribute("class","taskBar")
+        taskList.append(taskBar)
+
+        let taskClsBtn = document.createElement('div')
+        taskClsBtn.setAttribute("class","taskClnBtn")
+        taskClsBtn.setAttribute("id",i)
+        taskClsBtn.addEventListener("click",deleteTask)
+        taskClsBtn.innerHTML = "🗑";
+        taskBar.append(taskClsBtn)
+
+        let taskPriority = document.createElement('div')
+        taskPriority.setAttribute("class",taskListArray[i].priority)
+        taskPriority.innerHTML = "| ";
+        taskBar.append(taskPriority)
+
+
         let task = document.createElement('div')
         task.setAttribute("class","task")
         task.setAttribute("id",taskListArray[i].project)
         task.innerHTML = taskListArray[i].task;
-        taskList.append(task)
+        taskBar.append(task)
+
+        let date = document.createElement('div')
+        date.setAttribute("class","date")
+        date.innerHTML = taskListArray[i].deadline;
+        taskBar.append(date)
     }
 }
 }
@@ -66,4 +88,9 @@ function addTask(){
 }
 export{addTask}
 
-//present task in the related project 
+//delete the task 
+function deleteTask(){
+    taskListArray.splice(this.id,1);
+    removeAllChildNodes(taskList);
+    taskListCreation();
+}
