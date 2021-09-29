@@ -1,5 +1,5 @@
-import{cancelAddTask} from "/src/function/taskList.js"
-import{addTask} from "/src/function/taskList.js"
+import{cancelAddTask} from "/src/taskList.js"
+import{addTask} from "/src/taskList.js"
 
 function taskAddMenuCreation(){
     let taskPage = document.getElementById("taskPage")

@@ -1,4 +1,4 @@
-import{taskListAddSummon} from "/src/function/taskList.js"
+import{taskListAddSummon} from "/src/taskList.js"
 
 function taskPageCreation() {
     let parent = document.getElementById("parent")

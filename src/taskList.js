@@ -1,11 +1,11 @@
-import{taskAddMenuCreation} from "/src/structure/taskAddMenu.js"
+import{taskAddMenuCreation} from "/src/taskAddMenu.js"
 
 // Task array 
 let taskListArray = [
-    {project:'work',task:'find a job',deadline:'2021-08-21',priority:'Low'},
-    {project:'work',task:'get fired',deadline:'',priority:'Normal'},
-    {project:'work',task:'get unemployment',deadline:'',priority:'High'},
-    {project:'work',task:'profit',deadline:'',priority:'Top'},
+    {project:'work',task:'answer your emails',deadline:'2021-08-21',priority:'Low'},
+    {project:'work',task:'prepare for the presentation',deadline:'2021-08-21',priority:'Normal'},
+    {project:'work',task:'talk to Bob',deadline:'2021-08-21',priority:'High'},
+    {project:'work',task:'Quarterly review meeting',deadline:'2021-08-21',priority:'Top'},
 ]
 
 //task array to object

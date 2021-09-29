@@ -1,5 +1,5 @@
 import { taskListCreation } from "./taskList.js";
-import{projectAddMenuCreation} from "/src/structure/projectAddMenu.js";
+import{projectAddMenuCreation} from "/src/projectAddMenu.js";
 
 //Project array
 let projectList = [

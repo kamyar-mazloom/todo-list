@@ -19,7 +19,8 @@
   "homepage": "https://github.com/kamyar-mazloom/todo-list#readme",
   "devDependencies": {
     "prettier": "2.4.1",
-    "webpack": "^5.53.0",
+    "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0"
-  }
+  },
+  "dependencies": {}
 }

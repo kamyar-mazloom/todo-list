@@ -1,4 +1,4 @@
-import{projectAddSummon} from "/src/function/projectList.js";
+import{projectAddSummon} from "/src/projectList.js";
 
 function navbarCreation (){
     let parent = document.getElementById("parent")

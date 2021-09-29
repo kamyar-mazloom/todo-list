@@ -1,5 +1,5 @@
-import{cancelAddProject} from "/src/function/projectList.js"
-import{addProject} from "/src/function/projectList.js"
+import{cancelAddProject} from "/src/projectList.js"
+import{addProject} from "/src/projectList.js"
 
 function projectAddMenuCreation() {
     let navBar = document.getElementById("navBar")
